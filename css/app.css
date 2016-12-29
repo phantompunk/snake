@@ -1,9 +1,3 @@
-/*@font-face {
-		font-family: "EmojiSymbols";
-		src: url('EmojiSymbols-Regular.woff') format('woff');
-		text-decoration: none;
-		font-style: normal;
-}*/
 .winHeight {
 	height: 100vh;
 }
@@ -35,7 +29,7 @@ ul a:visited {
 }
 
 .hero p {
-	z-index: 1000;
+	/*z-index: 1000;*/
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
 	font-size: 2rem;
@@ -48,9 +42,22 @@ ul a:visited {
 	/*font-family: 'Permanent Marker', cursive;*/
 	font-size: 2rem;
 }
+.base {
+	position: absolute;
+}
+.pushup {
+	position: relative;
+	padding-top: 50%;
+	/*background: black;*/
+	z-index: 1000;
+}
+.pushup p {
+	color: red;
+	z-index: 1000;
+}
 .overlay {
 	height: 100vh;
-	z-index: -50;
+	z-index: 50;
 	position: relative;
 top: 60%;
 -webkit-transform: translateY(-60%);
@@ -60,14 +67,15 @@ transform: translateY(-60%);
 
 .overlay p {
 	color: white;
+	/*background-color: #2F2D2E;*/
+	opacity: 0;
+	transition: all ease 2s;
 }
-body {
-  /*background-color: #2F2D2E;*/
-}
-/*h3{
-  color: white;
-}*/
 
+.overlay p:hover,
+.overlay .p:active {
+	opacity: 1;
+}
 /** {
     -khtml-user-select: none;
     -o-user-select: none;
