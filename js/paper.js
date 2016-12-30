@@ -1,8 +1,9 @@
 var x = 50;
 var y = 50;
-var square = 75;
+var square = 50;
+
 var b = new Rectangle(
-      new Point(x,y),
+      new Point(x/2,y/2),
       new Size(square,square));
 
 var first = new Path.Rectangle(b);
